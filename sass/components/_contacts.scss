@@ -1,0 +1,23 @@
+.contacts-list {
+  display: flex;
+
+  margin-left: auto;
+
+  &__contact:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.contact {
+  &__link {
+    @extend .page__link;
+    @include centered;
+
+    color: var(--main-text-color);
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}

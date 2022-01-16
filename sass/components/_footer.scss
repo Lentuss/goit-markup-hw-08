@@ -1,0 +1,33 @@
+.footer-section {
+  padding: 60px 0;
+  background-color: var(--dark-background-color);
+}
+.footer-block {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--white-color);
+  font-style: normal;
+  @include text(14px, 1.71);
+
+  &__physical {
+    margin: 0 0 9px;
+  }
+
+  &__link {
+    display: inline-block;
+
+    color: var(--white-color);
+    opacity: 60%;
+    text-decoration: none;
+
+    &:not(:last-child) {
+      @extend .footer-address__physical;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.clients {
+  &__title {
+    text-align: center;
+
+    margin: 0 0 50px;
+
+    @include text(36px, 1.17, 700);
+  }
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.clients__logo {
+  @include transit(color, border-color);
+  @include centered;
+
+  border: 1px solid;
+  border-color: var(--icon-fill-color);
+  border-radius: 4px;
+
+  width: 170px;
+  height: 92px;
+
+  color: var(--icon-fill-color);
+
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+    border-color: var(--brand-color);
+  }
+}
+.logo__icon {
+  fill: currentColor;
+}

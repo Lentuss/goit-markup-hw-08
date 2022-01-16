@@ -1,0 +1,8 @@
+.alter-state {
+  @include transit(color);
+
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+}

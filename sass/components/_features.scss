@@ -1,0 +1,39 @@
+.features {
+  padding: 94px 0;
+
+  &__list {
+    display: flex;
+  }
+  &__thumb {
+    @include centered;
+
+    margin-bottom: 30px;
+
+    width: 270px;
+    height: 120px;
+    background: var(--light-background-color);
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+
+    text-transform: uppercase;
+
+    @include text(14px, 1.14, 700);
+  }
+
+  &__content {
+    margin: 0;
+
+    @include text(14px, 1.71);
+    letter-spacing: 0.03em;
+  }
+}
+.features__card {
+  flex-basis: calc((100% - 90px) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}

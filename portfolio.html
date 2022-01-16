@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Портфолио</title>
+  </head>
+  <body>
+    <header>
+      <section class="header-section">
+        <div class="container header-section__container">
+          <a href="#" class="logo logo--header"><span class="logo__part">Web</span>Studio</a>
+          <nav>
+            <ul class="nav-list">
+              <li class="page nav-list__page">
+                <a class="page__link alter-state" href="./index.html" width="48px">Студия</a>
+              </li>
+              <li class="page nav-list__page">
+                <a class="page__link alter-state page__link--curent" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="page nav-list__page">
+                <a class="page__link alter-state" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts-list">
+            <li class="contact contacts-list__contact">
+              <a class="contact__link alter-state" href="mailto:info@example.com">
+                <svg class="contact__icon" width="16" height="12">
+                  <use href="./images/icons.svg#mail"></use>
+                </svg>
+                info@example.com
+              </a>
+            </li>
+            <li class="contact">
+              <a class="contact__link alter-state" href="tel:380991111111">
+                <svg class="contact__icon" width="10" height="16">
+                  <use href="./images/icons.svg#phone"></use>
+                </svg>
+                +38 099 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Portfolio section -->
+      <section class="portfolio">
+        <div class="container">
+          <h1 class="portfolio__title">Примеры работ</h1>
+          <ul class="filter">
+            <li class="filter__item">
+              <button type="button" class="filter__button filter__button--changed">Все</button>
+            </li>
+            <li class="filter__item">
+              <button type="button" class="filter__button filter__button--changed">
+                Веб-сайты
+              </button>
+            </li>
+            <li class="filter__item">
+              <button type="button" class="filter__button filter__button--changed">
+                Приложения
+              </button>
+            </li>
+            <li class="filter__item">
+              <button type="button" class="filter__button filter__button--changed">Дизайн</button>
+            </li>
+            <li class="filter__item">
+              <button type="button" class="filter__button filter__button--changed">
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+
+          <!-- portfolio list -->
+
+          <ul class="portfolio__list">
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img
+                    src="./images/port1.jpg"
+                    width="370"
+                    alt="Открытый ноутбук с сайтом на экране"
+                  />
+                  <p class="project__overlay">
+                    Технокряк это современная площадка распространения коронавируса. Компании
+                    используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                    конкурентов.
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Технокряк</p>
+                  <span class="project__type">Веб-сайт</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img src="./images/port2.jpg" alt="Два баскетболиста борятся за мяч" />
+                  <p class="project__overlay">
+                    Для создания этого постера использовалось фото двух наших сотрудников, дерущихся
+                    за последнюю печеньку в тарелке. Ни одна печенька не пострадала.
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Постер New Orlean vs Golden Star</p>
+                  <span class="project__type">Дизайн</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img src="./images/port3.jpg" alt="Логотип ресторана с рисунком рыбы на фоне" />
+                  <p class="project__overlay">
+                    Приложение очень рыбного ресторана. Разработано для того, чтобы гость мог
+                    заранее заказать географическую ориентацию рыбной головы в заказанном блюде. По
+                    умолчанию задан параметр "На Одессу"
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Ресторан Seafood</p>
+                  <span class="project__type">Приложение</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img src="./images/port4.jpg" alt="Черные наушники" />
+                  <p class="project__overlay">
+                    Популяризация проекта Prime позволит более эффективно находить единомышленников
+                    для проведения времени за единицей одноименного товара. Анонимность
+                    гарантируется.
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Проект Prime</p>
+                  <span class="project__type">Маркетинг</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img src="./images/port5.jpg" alt="Две коробки, крафтовая и светлая" />
+                  <p class="project__overlay">
+                    Вам нужно упаковать подарок? Квартиру для переезда? Теща десять раз спиной упала
+                    на топор и надо срочно устранить эту неприятность? Просто добавьте фото
+                    упаковываемого в Boxes и через 10 минут примите и оплатите коробки нужного
+                    размера.
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Проект Boxes</p>
+                  <span class="project__type">Приложение</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img src="./images/port6.jpg" alt="Компьютерный монитор с сайтом на экране" />
+                  <p class="project__overlay">
+                    Веб-сайт для поиска источников вдохновения, с описанием их действия и самых
+                    популярных рецептов приготовления.
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Inspiration has no Borders</p>
+                  <span class="project__type">Веб-сайт</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img
+                    src="./images/port7.jpg"
+                    alt="Открытый журнал с текстом и фотографиями на страницах"
+                  />
+                  <p class="project__overlay">
+                    Издание Limited Edition с помощью статей от профессионалов мира моды и
+                    косметологии, дельных советов и интересных экспериментов сделает из любой
+                    среднестатистической замухрышки редкостную уродину лимитированного образца.
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Издание Limited Edition</p>
+                  <span class="project__type">Дизайн</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img
+                    src="./images/port8.jpg"
+                    alt="Белая бирка с надписью на крафтовой веревке "
+                  />
+                  <p class="project__overlay">
+                    Даже бирочка для лабораторий и прочих медучреждений может быть белой и красивой,
+                    а не страшной и клеенчатой. Только об этом никто не знает. Проект LAB призван
+                    популяризировать культуру использования красивых бирочек в профильных
+                    заведениях.
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Проект LAB</p>
+                  <span class="project__type">Маркетинг</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="portfolio__card">
+              <a href="#" class="project">
+                <div class="project__thumb">
+                  <img src="./images/port9.jpg" alt="Открытый ноутбук с приложением на экране" />
+                  <p class="project__overlay">
+                    Приложение, позволяющее вырастить свой бизнес. Среди функционала реализованы
+                    напоминания о поливе, советы по правильному подбору субстрата и функция
+                    оповещения о наиболее благоприятных для посадки фазах луны.
+                  </p>
+                </div>
+                <div class="project__description">
+                  <p class="project__title">Growing Business</p>
+                  <span class="project__type">Приложение</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-block">
+          <div class="adress-block">
+            <a class="logo logo--footer" href="#"><span class="logo__part">Web</span>Studio</a>
+            <address class="footer-address">
+              <p class="footer-address__physical">г. Киев, пр-т Леси Украинки, 26</p>
+              <a class="footer-address__link" href="mailto:info@example.com">info@example.com</a>
+              <a class="footer-address__link" href="tel:380991111111">+38 099 111 11 11</a>
+            </address>
+          </div>
+          <div class="join join--position">
+            <p class="join__offer">Присоединяйтесь</p>
+            <ul class="social-links">
+              <li class="social-links__item">
+                <a class="social-links__link" href="#">
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a href="#" class="social-links__link">
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a href="#" class="social-links__link">
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a href="#" class="social-links__link">
+                  <svg class="social-links__icon" width="20px" height="20px">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="mailing mailing-block">
+            <p class="mailing__offer">Подпишитесь на рассылку</p>
+            <form class="mailing__form">
+              <input class="mailing__input" type="email" placeholder="E-mail" name="email" />
+              <button class="button mailing__button" type="submit">
+                Подписаться
+                <svg class="mailing__icon" width="24" height="24">
+                  <use href="images/icons.svg#send" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

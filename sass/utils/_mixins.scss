@@ -1,0 +1,17 @@
+@mixin transit($property...) {
+  transition-property: $property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin text($size, $height, $weight: 400) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+@mixin centered($display: flex, $justify: center, $align: center, $textalign: center) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  text-align: $textalign;
+}

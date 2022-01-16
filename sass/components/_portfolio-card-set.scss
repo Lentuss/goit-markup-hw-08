@@ -1,0 +1,70 @@
+.portfolio {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+
+  &__card {
+    @include transit(box-shadow);
+
+    flex-basis: calc((100% - 90px) / 3);
+    margin: 0 30px 30px 0;
+
+    &:focus,
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+
+.project {
+  text-decoration: none;
+  color: var(--main-text-color);
+
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__description {
+    text-align: start;
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+  }
+  &__title {
+    margin: 0 0 4px;
+
+    @include text(18px, 2, 700);
+    color: var(--title-color);
+  }
+  &__type {
+    @include text(16px, 1.88);
+  }
+}
+.project__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: translateY(100%);
+  transition: transform 1s linear;
+
+  padding: 63px 24px;
+  margin: 0;
+  text-align: start;
+
+  background: rgba(33, 150, 243, 0.9);
+
+  @include text(18px, 1.56);
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+
+  .portfolio__card:hover & {
+    transform: translateY(0%);
+  }
+}
