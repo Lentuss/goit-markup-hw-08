@@ -12,3 +12,17 @@
   /* icon color settings */
   --icon-fill-color: #afb1b8;
 }
+$breakpoints: (
+  'mobile': (
+    min-width: 319px,
+  ),
+  'tablet': (
+    min-width: 768px,
+  ),
+  'desktop': (
+    min-width: 1200px,
+  ),
+  'desktop-fhd': (
+    min-width: 1919px,
+  ),
+) !default;

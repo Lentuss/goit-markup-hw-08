@@ -2,21 +2,41 @@
   position: relative;
   background-color: var(--dark-background-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/herobg.jpg);
+    url(../images/hero-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1600px;
+  max-width: 480px;
+  width: 100%;
+  height: 400px;
 
   text-align: center;
 
-  padding: 200px 0;
+  padding: 118px 0;
   margin: 0 auto;
+
+  @include respond-to(tablet) {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-tabl.jpg);
+  }
+  @include respond-to(desktop) {
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/herobg.jpg);
+
+    padding: 200px 0;
+  }
 
   &__title {
     margin: 0 auto 30px;
 
     color: var(--white-color);
-    @include text(44px, 1.36, 900);
+    @include text(26px, 1.61, 900);
+
+    @include respond-to(desktop) {
+      @include text(44px, 1.36, 900);
+    }
   }
 }
 .hero__button {

@@ -1,25 +1,32 @@
 .features {
-  padding: 94px 0;
+  @include respond-to(desktop) {
+    padding: 94px 0;
+  }
 
   &__list {
-    display: flex;
+    @include respond-to(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+    }
   }
   &__thumb {
     @include centered;
-
     margin-bottom: 30px;
 
-    width: 270px;
-    height: 120px;
     background: var(--light-background-color);
     border-radius: 4px;
+
+    height: 120px;
   }
 
   &__title {
     margin: 0 0 10px;
 
     text-transform: uppercase;
-
     @include text(14px, 1.14, 700);
   }
 
@@ -31,9 +38,11 @@
   }
 }
 .features__card {
-  flex-basis: calc((100% - 90px) / 4);
-
-  &:not(:last-child) {
-    margin-right: 30px;
+  @include respond-to(tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+  @include respond-to(desktop) {
+    flex-basis: calc((100% - 90px) / 4);
   }
 }
