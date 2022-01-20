@@ -8,21 +8,21 @@
   }
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
   }
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item {
+    margin: 15px;
   }
 }
 .clients__logo {
   @include transit(color, border-color);
   @include centered;
+  margin: 0;
 
   border: 1px solid;
   border-color: var(--icon-fill-color);
   border-radius: 4px;
-
-  width: 170px;
-  height: 92px;
 
   color: var(--icon-fill-color);
 
@@ -34,4 +34,13 @@
 }
 .logo__icon {
   fill: currentColor;
+  /*   max-width: 210px;
+  max-height: 92px; */
+}
+
+@include respond-to(tablet) {
+  flex-basis: calc((100% - 75px) / 3);
+}
+@include respond-to(desktop) {
+  flex-basis: calc((100% - 105px) / 6);
 }

@@ -31,13 +31,19 @@ img {
 }
 a {
   cursor: pointer;
+  margin: 0;
 }
 
 .title-color {
   margin: 0;
   color: var(--title-color);
-  /* @include text(36px, 1.17, 700);
-  letter-spacing: 0.03em; */
+  @include text(26px, 1.27, 700);
+  letter-spacing: 0.03em;
+
+  @include respond-to(desktop) {
+    @include text(36px, 1.17, 700);
+    letter-spacing: 0.03em;
+  }
 }
 
 .section {
