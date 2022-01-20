@@ -1,10 +1,23 @@
 .footer-section {
-  padding: 60px 0;
+  padding: 60px 15px;
   background-color: var(--dark-background-color);
+
+  @include respond-to(tablet) {
+    padding: 60px 0;
+  }
 }
 .footer-block {
-  display: flex;
-  align-items: baseline;
+  @media (max-width: 1199px) {
+    display: block;
+    text-align: center;
+  }
+
+  @include respond-to(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
 }
 
 .footer-address {

@@ -1,10 +1,19 @@
 .mailing-block {
-  margin-left: auto;
+  margin: 0 auto;
+
+  @include respond-to(desktop) {
+    margin: 0 0 0 auto;
+  }
 }
 .mailing {
+  padding-top: 60px;
   &__form {
-    display: flex;
-    flex-direction: row;
+    @include centered;
+    flex-direction: column;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
   }
 
   &__offer {
@@ -23,23 +32,31 @@
   }
 }
 .mailing__input {
-  width: 358px;
-  min-height: 50px;
+  margin-bottom: 20px;
+
   background-color: inherit;
-
-  padding: 15px 0;
-
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   border-radius: 4px;
-
   text-indent: 16px;
+
   @include text(16px, 1.25);
   letter-spacing: 0.03em;
   color: #fff;
-
+  width: 100%;
+  min-height: 50px;
   @include transit(border-color, outline);
 
+  @include respond-to(tablet) {
+    width: 450px;
+  }
+
+  @include respond-to(desktop) {
+    margin-bottom: 0;
+    padding: 15px 0;
+
+    width: 358px;
+  }
   &:focus {
     border-color: var(--brand-color);
     outline: var(--brand-color);

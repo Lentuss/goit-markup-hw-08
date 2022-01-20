@@ -1,6 +1,16 @@
 .join {
   &--position {
-    margin-left: 70px;
+    text-align: center;
+    padding-top: 60px;
+
+    @include respond-to(tablet) {
+      margin-left: 165px;
+      padding-top: 0;
+    }
+    @include respond-to(desktop) {
+      margin-left: 70px;
+      text-align: left;
+    }
   }
   &__offer {
     margin: 0 0 20px;
@@ -13,6 +23,7 @@
 }
 .social-links {
   display: flex;
+  justify-content: center;
 
   &__item:not(:last-child) {
     margin-right: 10px;
