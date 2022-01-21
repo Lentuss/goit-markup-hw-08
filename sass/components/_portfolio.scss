@@ -1,6 +1,9 @@
 .portfolio {
   text-align: center;
-  padding: 94px 0;
+  padding: 60px 0;
+  @include respond-to(desktop) {
+    padding: 94px 0;
+  }
 
   &__title {
     height: 0;
