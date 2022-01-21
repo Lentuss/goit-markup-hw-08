@@ -3,9 +3,12 @@
 
   margin: 0 0 12px 0;
 
-  @include text(20px, 1.15, 700);
+  @include text(20px, 1.5, 700);
   letter-spacing: 0.03em;
   color: var(--title-color);
+  @include respond-to(desktop) {
+    line-height: 1.15;
+  }
 }
 .form {
   display: flex;

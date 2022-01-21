@@ -9,15 +9,35 @@
   }
 }
 .filter {
-  @include centered;
+  @include centered($justify: start);
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 
-  margin-bottom: 50px;
+  @include respond-to(tablet) {
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+  }
 
-  &__item:not(:last-child) {
-    margin-right: 8px;
+  @include respond-to(desktop) {
+    margin-bottom: 50px;
   }
 }
+.filter__item {
+  align-self: start;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &:nth-child(-n + 3) {
+    @media screen and(max-width:767px) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
 .filter__button {
+  height: 38px;
   padding: 6px 22px;
 
   border-color: transparent;
