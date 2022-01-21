@@ -299,6 +299,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
+  width: 100%;
 }
 
 @media screen and (min-width: 480px) {
@@ -334,6 +335,7 @@ img {
 a {
   cursor: pointer;
   margin: 0;
+  text-decoration: none;
 }
 
 .title-color {
@@ -425,6 +427,7 @@ a {
   border-color: transparent;
   margin-left: auto;
   fill: currentColor;
+  z-index: 4;
 }
 
 @media screen and (min-width: 768px) {
@@ -448,37 +451,6 @@ a {
 
 .header-section .burger-btn:hover, .header-section .burger-btn:focus {
   color: var(--brand-color);
-}
-
-.header-section .menu-container {
-  display: contents;
-}
-
-@media screen and (max-width: 767px) {
-  .header-section .menu-container {
-    display: none;
-  }
-  .header-section .menu-container .menu-container.is-open {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 400px;
-    z-index: 10;
-    background-color: yellow;
-  }
-}
-
-@media (min-width: 768px) {
-  .socials-list {
-    display: none;
-  }
 }
 
 .logo {
@@ -520,13 +492,19 @@ a {
   display: flex;
 } */
 .nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  margin-left: 88px;
+  margin-bottom: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin-left: 88px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -540,12 +518,19 @@ a {
 }
 
 .page__link, .contact__link {
-  padding: 32px 0;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.18;
   font-weight: 500;
   color: var(--title-color);
-  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .page__link, .contact__link {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+  }
 }
 
 .page__link--curent {
@@ -564,11 +549,10 @@ a {
   border-radius: 2px;
 }
 
-.contacts-list {
-  /* @media (max-width: 767px) {
-    display: none;
-  } */
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .contacts-list {
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -623,6 +607,86 @@ a {
 .contact__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 48px 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: contents;
+  }
+}
+
+.menu-container.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  background-color: var(--white-color);
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+.socials-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .socials-list {
+    display: none;
+  }
+}
+
+.socials-list__link {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.22;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.social-list__item {
+  position: relative;
+}
+
+.social-list__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 1px;
+  bottom: 50%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .hero {
@@ -1534,6 +1598,7 @@ a {
   left: 0px;
   top: 0px;
   z-index: 1;
+  overflow-y: scroll;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
   background: rgba(0, 0, 0, 0.2);
