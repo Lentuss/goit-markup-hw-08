@@ -23,39 +23,70 @@
       <section class="header-section">
         <div class="container header-section__container">
           <a href="#" class="logo logo--header"><span class="logo__part">Web</span>Studio</a>
-          <nav>
-            <ul class="nav-list">
-              <li class="page nav-list__page">
-                <a class="page__link alter-state page__link--curent" href="#" width="48px"
-                  >Студия</a
+          <button
+            class="burger-btn"
+            type="button"
+            aria-label="переключатель мобильного меню"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40px" height="40px">
+              <use class="icon-menu" href="images/icons.svg#menu"></use>
+              <use class="icon-close" href="images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="page nav-list__page">
+                  <a class="page__link alter-state page__link--curent" href="#" width="48px"
+                    >Студия</a
+                  >
+                </li>
+                <li class="page nav-list__page">
+                  <a class="page__link alter-state" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="page nav-list__page">
+                  <a class="page__link alter-state" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="contacts-list">
+              <li class="contact contacts-list__contact">
+                <a class="contact__link alter-state" href="mailto:info@example.com">
+                  <svg class="contact__icon" width="16" height="12">
+                    <use href="./images/icons.svg#mail"></use>
+                  </svg>
+                  info@example.com
+                </a>
+              </li>
+              <li class="contact">
+                <a class="contact__link alter-state" href="tel:380991111111">
+                  <svg class="contact__icon" width="10" height="16">
+                    <use href="./images/icons.svg#phone"></use>
+                  </svg>
+                  +38 099 111 11 11</a
                 >
               </li>
-              <li class="page nav-list__page">
-                <a class="page__link alter-state" href="./portfolio.html">Портфолио</a>
+            </ul>
+
+            <ul class="socials-list">
+              <li>
+                <a href="#" class="socials-list__link alter-state"> Instagram </a>
               </li>
-              <li class="page nav-list__page">
-                <a class="page__link alter-state" href="#">Контакты</a>
+              <li>
+                <a href="#" class="socials-list__link alter-state"> Twitter </a>
+              </li>
+              <li>
+                <a href="#" class="socials-list__link alter-state"> Facebook </a>
+              </li>
+              <li>
+                <a href="#" class="socials-list__link alter-state"> Linkedin </a>
               </li>
             </ul>
-          </nav>
-          <ul class="contacts-list">
-            <li class="contact contacts-list__contact">
-              <a class="contact__link alter-state" href="mailto:info@example.com">
-                <svg class="contact__icon" width="16" height="12">
-                  <use href="./images/icons.svg#mail"></use>
-                </svg>
-                info@example.com
-              </a>
-            </li>
-            <li class="contact">
-              <a class="contact__link alter-state" href="tel:380991111111">
-                <svg class="contact__icon" width="10" height="16">
-                  <use href="./images/icons.svg#phone"></use>
-                </svg>
-                +38 099 111 11 11</a
-              >
-            </li>
-          </ul>
+          </div>
         </div>
       </section>
     </header>
@@ -478,5 +509,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
