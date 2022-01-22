@@ -1,18 +1,15 @@
 .menu-container {
   display: flex;
-  flex-direction: column;
-
-  padding: 48px 40px;
-
-  @include respond-to(tablet) {
-    display: contents;
-  }
+  width: 100%;
+  justify-content: space-between;
 
   @media screen and (max-width: 767px) {
     display: none;
 
     &.is-open {
       display: flex;
+      flex-direction: column;
+      padding: 48px 40px;
 
       position: fixed;
       overflow: hidden;

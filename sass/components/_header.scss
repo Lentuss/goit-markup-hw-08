@@ -12,6 +12,7 @@
     border-color: transparent;
     margin-left: auto;
     fill: currentColor;
+
     z-index: 4;
 
     @include respond-to(tablet) {
@@ -19,6 +20,10 @@
     }
     & .icon-close {
       display: none;
+    }
+    &.is-open {
+      position: fixed;
+      right: 0;
     }
     &.is-open .icon-close {
       display: block;
