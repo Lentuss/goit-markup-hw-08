@@ -158,19 +158,35 @@
           <h2 class="work-direction__title title-color">Чем мы занимаемся</h2>
           <ul class="work-direction__list">
             <li class="work-direction__item">
-              <img src="./images/img1what.jpg" alt="человек печатает на клавиатуре" width="370" />
+              <picture>
+                <source
+                  srcset="./images/img1what.jpg 1x, ./images/dir1@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img src="./images/img1what.jpg" alt="человек печатает на клавиатуре" width="370" />
+              </picture>
               <p class="work-direction__label">Десктопные приложения</p>
             </li>
             <li class="work-direction__item">
-              <img src="./images/img2what.jpg" alt="женщина держит в реках телефон" width="370" />
+              <picture>
+                <source
+                  srcset="./images/img2what.jpg 1x, ./images/dir2@2x.jpg 2x"
+                  type="image/jpeg" />
+                <img src="./images/img2what.jpg" alt="женщина держит в реках телефон" width="370"
+              /></picture>
               <p class="work-direction__label">Мобильные приложения</p>
             </li>
             <li class="work-direction__item">
-              <img
-                src="./images/img3what.jpg"
-                alt="планшет со цветовым спектром на экране"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/img3what.jpg 1x, ./images/dir3@2x.jpg 2x"
+                  type="image/jpeg" />
+                <img
+                  src="./images/img3what.jpg"
+                  alt="планшет со цветовым спектром на экране"
+                  width="370"
+              /></picture>
               <p class="work-direction__label">Дизайнерские решения</p>
             </li>
           </ul>
@@ -182,7 +198,41 @@
           <h2 class="team-section__title title-color">Наша команда</h2>
           <ul class="our-team">
             <li class="our-team__card">
-              <img src="./images/img.jpg" alt="мужчина в очках с бородой" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team1.webp 1x, ./images/team1@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team1.jpg 1x, ./images/team1@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team1-tab.webp 1x, ./images/team1-tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team1-tab.jpg 1x, ./images/team1-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team1-mob.webp 1x, ./images/team1-mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team1-mob.jpg 1x, ./images/team1-mob@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img src="./images/team1-mob.jpg" alt="мужчина в очках с бородой" />
+              </picture>
               <div class="our-team__description">
                 <h3 class="our-team__unit">Игорь Демьяненко</h3>
                 <p class="our-team__position">Product Designer</p>
@@ -220,7 +270,42 @@
             </li>
 
             <li class="our-team__card">
-              <img src="./images/img2team.jpg" alt="женщина в очках в темном пиджаке" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team2.webp 1x, ./images/team2@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team2.jpg 1x, ./images/team2@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team2-tab.webp 1x, ./images/team2-tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team2-tab.jpg 1x, ./images/team2-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team2-mob.webp 1x, ./images/team2-mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team2-mob.jpg 1x, ./images/team2-mob@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img src="./images/team2-mob.jpg" alt="женщина в очках в темном пиджаке" />
+              </picture>
+
               <div class="our-team__description">
                 <h3 class="our-team__unit">Ольга Репина</h3>
                 <p class="our-team__position">Frontend Developer</p>
@@ -258,7 +343,41 @@
             </li>
 
             <li class="our-team__card">
-              <img src="./images/img3team.jpg" alt="Мужчина с бородой в светлой рубашке" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team3.webp 1x, ./images/team3@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team3.jpg 1x, ./images/team3@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team3-tab.webp 1x, ./images/team3-tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team3-tab.jpg 1x, ./images/team3-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team3-mob.webp 1x, ./images/team3-mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team3-mob.jpg 1x, ./images/team3-mob@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img src="./images/team3-mob.jpg" alt="мужчина с бородой в светлой рубашке" />
+              </picture>
               <div class="our-team__description">
                 <h3 class="our-team__unit">Николай Тарасов</h3>
                 <p class="our-team__position">Marketing</p>
@@ -296,7 +415,44 @@
             </li>
 
             <li class="our-team__card">
-              <img src="./images/img4.jpg" alt="Мужчина в очках с бородой в темной футболке" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team4.webp 1x, ./images/team4@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team4.jpg 1x, ./images/team4@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team4-tab.webp 1x, ./images/team4-tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team4-tab.jpg 1x, ./images/team4-tab@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team4-mob.webp 1x, ./images/team4-mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team4-mob.jpg 1x, ./images/team4-mob@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/team4-mob.jpg"
+                  alt="Мужчина в очках с бородой в темной футболке"
+                />
+              </picture>
               <div class="our-team__description">
                 <h3 class="our-team__unit">Максим Ермаков</h3>
                 <p class="our-team__position">UI Designer</p>
