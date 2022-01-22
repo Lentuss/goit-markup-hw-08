@@ -1,9 +1,4 @@
-/* .nav {
-  display: flex;
-} */
 .nav-list {
-  margin-bottom: auto;
-
   @include respond-to(tablet) {
     display: flex;
     justify-content: start;
@@ -15,7 +10,12 @@
   }
 
   &__page:not(:last-child) {
-    margin-right: 50px;
+    @media (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+    @include respond-to(tablet) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -32,6 +32,10 @@
   &--curent {
     position: relative;
     color: var(--brand-color);
+
+    @media (max-width: 767px) {
+      color: initial;
+    }
   }
 
   &--curent::after {
@@ -45,5 +49,9 @@
 
     background: var(--brand-color);
     border-radius: 2px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }

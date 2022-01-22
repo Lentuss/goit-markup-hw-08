@@ -1,15 +1,23 @@
 .contacts-list {
-  @include respond-to(tablet) {
-    margin-left: auto;
-  }
-  @media (max-width: 1199px) {
-    flex-direction: column;
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: auto;
+    margin-bottom: 64px;
   }
   @include respond-to(tablet) {
     display: flex;
+    margin-left: auto;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+  }
+
   &__contact:not(:last-child) {
-    @media (max-width: 1199px) {
+    @media (max-width: 767px) {
+      margin-top: 32px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-bottom: 10px;
     }
     @include respond-to(desktop) {
@@ -28,8 +36,26 @@
       @include centered;
     }
   }
+  &__phone {
+    @media (max-width: 767px) {
+      @include text(34px, 1.18, 500);
+      letter-spacing: 0.02em;
 
+      padding: 0;
+    }
+  }
+  &__mail {
+    @media (max-width: 767px) {
+      @include text(24px, 1.17, 500);
+      letter-spacing: 0.02em;
+
+      padding: 0;
+    }
+  }
   &__icon {
+    @media (max-width: 767px) {
+      display: none;
+    }
     fill: currentColor;
     margin-right: 10px;
   }

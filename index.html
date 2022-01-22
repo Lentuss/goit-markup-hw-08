@@ -7,6 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -48,14 +49,14 @@
                   <a class="page__link alter-state" href="./portfolio.html">Портфолио</a>
                 </li>
                 <li class="page nav-list__page">
-                  <a class="page__link alter-state" href="#">Контакты</a>
+                  <a class="page__link alter-state" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
 
             <ul class="contacts-list">
               <li class="contact contacts-list__contact">
-                <a class="contact__link alter-state" href="mailto:info@example.com">
+                <a class="contact__link alter-state contact__mail" href="mailto:info@example.com">
                   <svg class="contact__icon" width="16" height="12">
                     <use href="./images/icons.svg#mail"></use>
                   </svg>
@@ -63,7 +64,7 @@
                 </a>
               </li>
               <li class="contact">
-                <a class="contact__link alter-state" href="tel:380991111111">
+                <a class="contact__link alter-state contact__phone" href="tel:380991111111">
                   <svg class="contact__icon" width="10" height="16">
                     <use href="./images/icons.svg#phone"></use>
                   </svg>
@@ -389,7 +390,7 @@
     <footer class="footer-section">
       <div class="container">
         <div class="footer-block">
-          <div class="adress-block">
+          <div class="adress-block" id="contacts">
             <a class="logo logo--footer" href="#"><span class="logo__part">Web</span>Studio</a>
             <address class="footer-address">
               <p class="footer-address__physical">г. Киев, пр-т Леси Украинки, 26</p>

@@ -336,6 +336,7 @@ a {
   cursor: pointer;
   margin: 0;
   text-decoration: none;
+  padding: 0;
 }
 
 .title-color {
@@ -488,13 +489,6 @@ a {
   margin-bottom: 20px;
 }
 
-/* .nav {
-  display: flex;
-} */
-.nav-list {
-  margin-bottom: auto;
-}
-
 @media screen and (min-width: 768px) {
   .nav-list {
     display: -webkit-box;
@@ -513,8 +507,16 @@ a {
   }
 }
 
-.nav-list__page:not(:last-child) {
-  margin-right: 50px;
+@media (max-width: 767px) {
+  .nav-list__page:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list__page:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .page__link, .contact__link {
@@ -538,6 +540,12 @@ a {
   color: var(--brand-color);
 }
 
+@media (max-width: 767px) {
+  .page__link--curent {
+    color: initial;
+  }
+}
+
 .page__link--curent::after {
   content: '';
   position: absolute;
@@ -549,18 +557,23 @@ a {
   border-radius: 2px;
 }
 
-@media screen and (min-width: 768px) {
-  .contacts-list {
-    margin-left: auto;
+@media (max-width: 767px) {
+  .page__link--curent::after {
+    display: none;
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .contacts-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-top: auto;
+    margin-bottom: 64px;
   }
 }
 
@@ -569,10 +582,26 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: auto;
   }
 }
 
-@media (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts-list__contact:not(:last-child) {
+    margin-top: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts-list__contact:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -604,9 +633,35 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .contact__phone {
+    font-size: 34px;
+    line-height: 1.18;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact__mail {
+    font-size: 24px;
+    line-height: 1.17;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0;
+  }
+}
+
 .contact__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .contact__icon {
+    display: none;
+  }
 }
 
 .menu-container {
@@ -617,9 +672,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
   padding: 48px 40px;
 }
 
@@ -629,22 +681,21 @@ a {
   }
 }
 
-.menu-container.is-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 3;
-  background-color: var(--white-color);
-}
-
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
+  }
+  .menu-container.is-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background-color: var(--white-color);
   }
 }
 
@@ -652,6 +703,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 378px) {
+  .socials-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 768px) {
@@ -667,7 +725,7 @@ a {
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: var(--main-text-color);
+  color: var(--brand-color);
 }
 
 .social-list__item {
