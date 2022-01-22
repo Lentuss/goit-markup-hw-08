@@ -27,7 +27,6 @@
   border-radius: 0px 0px 4px 4px;
   width: 100%;
   margin-bottom: 30px;
-  // max-width: 450px;
 
   @include respond-to(tablet) {
     flex-basis: calc((100% - 60px) / 2);
@@ -79,8 +78,10 @@
 
     &:hover,
     &:focus {
-      background-color: var(--brand-color);
-      fill: white;
+      @include respond-to(desktop) {
+        background-color: var(--brand-color);
+        fill: white;
+      }
     }
   }
 }

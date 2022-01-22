@@ -1089,9 +1089,11 @@ a {
   border-radius: 50%;
 }
 
-.socials__link:hover, .socials__link:focus {
-  background-color: var(--brand-color);
-  fill: white;
+@media screen and (min-width: 1200px) {
+  .socials__link:hover, .socials__link:focus {
+    background-color: var(--brand-color);
+    fill: white;
+  }
 }
 
 .clients__title {
@@ -1299,8 +1301,10 @@ a {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links__link:hover, .social-links__link:focus {
-  background-color: var(--brand-color);
+@media screen and (min-width: 1200px) {
+  .social-links__link:hover, .social-links__link:focus {
+    background-color: var(--brand-color);
+  }
 }
 
 .mailing-block {
