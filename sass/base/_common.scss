@@ -51,7 +51,7 @@ a {
 }
 
 .section {
-  padding: 60px 15px;
+  padding: 60px 0;
   margin: 0 auto;
   @include respond-to(desktop) {
     padding: 94px 0;
