@@ -1,5 +1,9 @@
 .clients {
   &__title {
+    @media (max-width: 1199px) {
+      margin: 0 0 30px;
+      @include text(28px, 1.18, 700);
+    }
     text-align: center;
 
     margin: 0 0 50px;

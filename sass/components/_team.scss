@@ -8,6 +8,10 @@
 }
 .team-section__title {
   margin: 0 0 50px;
+  @media (max-width: 1199px) {
+    margin: 0 0 30px;
+    @include text(28px, 1.18, 700);
+  }
 }
 .our-team {
   margin-bottom: -30px;

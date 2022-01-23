@@ -37,6 +37,10 @@
   margin-bottom: 30px;
 }
 .agreement {
+  @media (max-width: 1199px) {
+    @include text(12px, 1.17);
+  }
+
   @include text(14px, 1.17);
   letter-spacing: 0.03em;
 
@@ -44,4 +48,5 @@
 }
 .agreement__link {
   color: var(--brand-color);
+  text-decoration: underline;
 }

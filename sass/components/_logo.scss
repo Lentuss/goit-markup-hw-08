@@ -12,8 +12,10 @@
 
   &--header {
     color: #000;
-    padding: 16px 0;
 
+    @media (max-width: 767px) {
+      padding: 16px 0;
+    }
     @include respond-to(tablet) {
       padding: 26px 0;
     }

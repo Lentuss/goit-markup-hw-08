@@ -24,6 +24,9 @@
   }
 
   &__title {
+    @media (max-width: 767px) {
+      text-align: center;
+    }
     margin: 0 0 10px;
 
     text-transform: uppercase;
@@ -44,5 +47,10 @@
   }
   @include respond-to(desktop) {
     flex-basis: calc((100% - 90px) / 4);
+  }
+  &:not(:last-child) {
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 }
